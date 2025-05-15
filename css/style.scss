@@ -1,0 +1,322 @@
+@use "base";
+
+/* borde imagen de inicio */
+.contenedor-imagen {
+  img {
+    border-radius: 200px;
+  }
+}
+
+/*efecto menu del footer*/
+.footer-container {
+  ul {
+    li {
+      a {
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 15px;
+        padding: 10px 0;
+        text-transform: uppercase;
+        transition: 0.1s;
+      }
+    }
+  }
+}
+
+.footer-container:hover {
+  ul {
+    li {
+      a {
+        color: black;
+      }
+    }
+  }
+}
+
+.footer-container {
+  ul {
+    li {
+      a {
+        &:hover {
+          color: white;
+          transform: scale(2.2);
+        }
+      }
+    }
+  }
+}
+
+/*borde de imagenes en galleria*/
+.gallery-container {
+  img {
+    border-radius: 40px;
+  }
+}
+
+/*video responsive NOTICIAS*/
+.container-youtube {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*h3 para seccion nosotros*/
+.h-3 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+.post-1 {
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+/*inicio*/
+/* modificacion con display-flex(inicio) */
+.inicio-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: row;
+  background-color: black;
+}
+
+/* con este llamado a class cambiamos con el display a lista vertical a horizontal */
+.inicio-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.inicio-menu {
+  li {
+    margin: 0 15px;
+  }
+}
+
+/* letras de menu inicio */
+.inicio-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
+}
+
+/*Tienda*/
+/* modificacion display-flex tienda */
+.tienda-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: row;
+  background-color: black;
+}
+
+.tienda-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.inicio-menu {
+  li {
+    margin: 0 15px;
+  }
+}
+
+.tienda-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
+}
+
+/*NOTICIAS*/
+/* modificacion display-flex (noticias) */
+.noticias-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: row;
+  background-color: black;
+}
+
+.noticias-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.noticias-menu {
+  li {
+    margin: 0 15px;
+  }
+}
+
+.noticias-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
+}
+
+/*NOSOTROS*/
+/* modificacion nosotros-menu con display flex */
+.nosotros-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: row;
+  background-color: black;
+}
+
+.nosotros-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.nosotros-menu {
+  li {
+    margin: 0 15px;
+  }
+}
+
+.nosotros-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
+}
+
+.nosotros-menu {
+  li {
+    margin: 0 15px;
+  }
+}
+
+/*CONTACTO*/
+/* modificacion contacto con display flex */
+
+.contacto-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: row;
+  background-color: black;
+}
+
+.contacto-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.contacto-menu {
+  li {
+    margin: 0 15px;
+  }
+}
+
+.contacto-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
+}
+
+.gallery-container {
+  /*ancho*/
+  width: 90%;
+
+  /*ancho maximo */
+  max-width: 1100px;
+
+  /*margen arriba y abajo*/
+  margin: 40px auto;
+
+  display: grid;
+
+  /*con este establecemos las columnas en la agaleria de tienda*/
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  /*separacion entre las imagenes*/
+  gap: 100px;
+}
+
+.menu-completo {
+  ul {
+    li {
+      a {
+        text-transform: uppercase;
+        transition: 0.1s;
+      }
+    }
+  }
+}
+
+/*sobre escritura estilos bootsrap*/
+.nav-link {
+  font-size: 20px;
+  color: white;
+  padding: 0px 50px 0px 50px;
+
+  /*padding-top:0px ; 
+    padding-rigth:40px;
+    padding-botom:0px;
+    padding-left:40px */
+}
+
+.navbar-collapse:hover {
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: black;
+      }
+    }
+  }
+}
+
+.navbar-collagse {
+  .navbar-nav {
+    .nav-iten {
+      .nav-link:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.nav-link {
+  display: flex;
+  padding: 20px;
+  gap: 5px;
+}
+
