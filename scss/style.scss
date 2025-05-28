@@ -7,45 +7,6 @@
   }
 }
 
-/*efecto menu del footer*/
-.footer-container {
-  ul {
-    li {
-      a {
-        text-decoration: none;
-        font-weight: 300;
-        font-size: 15px;
-        padding: 10px 0;
-        text-transform: uppercase;
-        transition: 0.1s;
-      }
-    }
-  }
-}
-
-.footer-container:hover {
-  ul {
-    li {
-      a {
-        color: black;
-      }
-    }
-  }
-}
-
-.footer-container {
-  ul {
-    li {
-      a {
-        &:hover {
-          color: white;
-          transform: scale(2.2);
-        }
-      }
-    }
-  }
-}
-
 /*borde de imagenes en galleria*/
 .gallery-container {
   img {
@@ -73,6 +34,18 @@
   text-align: center;
 }
 
+/*aplicando gradientes en el fondo de todas las paginas*/
+body {
+  background: linear-gradient(
+    to bottom,
+    #000000 70%,
+    // negro en la parte superior
+    #808080 90%,
+    // gris en el medio
+    #ffffff 100% // blanco al final
+  );
+}
+
 /*inicio*/
 /* modificacion con display-flex(inicio) */
 .inicio-menu {
@@ -81,7 +54,7 @@
   align-items: center;
   padding: 10px;
   flex-direction: row;
-  background-color: black;
+  background-color: white;
 }
 
 /* con este llamado a class cambiamos con el display a lista vertical a horizontal */
@@ -294,17 +267,47 @@
     padding-left:40px */
 }
 
-.navbar-collapse:hover {
-  .navbar-nav {
-    .nav-item {
-      .nav-link {
-        color: black;
+.navbar-collapse {
+  display: flex;
+  justify-content: center; // Centra el contenido horizontalmente
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .nav-item {
+    margin: 0 15px;
+
+    .nav-link {
+      font-size: 24px; // Agranda las letras del menú
+      text-align: center;
+      color: white;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #f0f0f0;
+        transform: scale(1.1); // Efecto de agrandamiento al pasar el cursor
       }
     }
   }
 }
+/*efecto del menu completo*/
+.navbar-collapse:hover .navbar-nav .nav-item .nav-link {
+  color: black;
+}
 
-.navbar-collagse {
+.navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+  color: white;
+}
+
+.navbar-nav .nav-item .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-collapse {
   .navbar-nav {
     .nav-iten {
       .nav-link:hover {
@@ -313,6 +316,7 @@
     }
   }
 }
+/*todo el footer*/
 
 .nav-link {
   display: flex;
@@ -320,3 +324,43 @@
   gap: 5px;
 }
 
+/*iconos red sociales*/
+.social-icons {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 50px;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* aplicando colores con  Bootstrap al pasar el mouse */
+.instagram :hover {
+  color: #d62976;
+}
+.whatsapp :hover {
+  color: green;
+}
+.facebook :hover {
+  color: blue;
+}
+
+h3 {
+  text-align: center;
+  text-decoration: underline;
+  color: white;
+}
+
+/*logo tienda*/
+.navbar-brand img {
+  width: 200px;
+  height: auto;
+
+  @media (max-width: 800px) {
+    width: 60px;
+  }
+}

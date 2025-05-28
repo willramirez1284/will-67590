@@ -6,15 +6,27 @@
     <title>CONTACTO</title>
 
     
+    <link rel="shortcut icon" href="images/Logo.ico" type="image/x-icon">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     
     <link rel="stylesheet" href="./css/style.css">
+
+
+
+    
 </head>
 <body class="contacto1">
 
+  
 
-    <nav class="navbar navbar-expand-lg bg-black">
-        <div class="container-fluid justify-content-end">
+
+  <nav class="navbar navbar-expand-lg bg-black">
+    <div class="container-fluid">
+      <!-- LOGO A LA IZQUIERDA -->
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Logo.png" alt="Logo Outdoor Calafquén" width="1" height="1">
+      </a>
           
             <!--menu hammburguesa -->
           <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,55 +64,77 @@
 
     </header>
     
-<main>
-
-
-    <h1>Contacto</h1>
-
-    <p>¡No te pierdas nuestras ofertas exclusivas!
-        Deja tus datos de contacto y sé el primero en enterarte de nuestras promociones especiales y nuevos modelos de parkas de alta montaña reutilizadas. <br>
-         ¡Mantente al día con nuestras novedades y consigue el mejor equipo a precios increíbles!</p>
-
-    <form action="submit"method="post" class="post-1">
-    <ul>
-        <ol>
-        <label for="nombre">nombre</label>
-        <input type="text" name="nombre" id="nombre">
-        </ol>
     
-        <ol>
-        <label for="apellido">apellido</label>
-        <input type="text" name="apellido" id="apellido">
-        </ol>
-
-        <ol>
-        <label for="password">contrasena</label>
-        <input type="password" name="password" id="password">
-        </ol>
-
-        <ol>
-        <label for="mensaje">mensaje</label>
-        <textarea name="mensaje" id="mensaje" ></textarea>
-        </ol>
-
-    </ul>
-        <input type="submit" value="enviar">
-
-    </form>
-
-
-</main>
+    <div class="row justify-content-center align-items-center">
+  
+      <!-- Formulario (columna izquierda) -->
+      <div class="col-lg-6 mb-4">
+        <h1 class="text-center text-white">Contacto</h1>
+        <form class="row g-3 bg-dark p-4 rounded" method="post" action="#">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label text-white">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Tu nombre">
+          </div>
+          <div class="col-md-6">
+            <label for="apellido" class="form-label text-white">Apellido</label>
+            <input type="text" class="form-control" id="apellido" name="apellido" required placeholder="Tu apellido">
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label text-white">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required placeholder="tucorreo@ejemplo.com">
+          </div>
+          <div class="col-md-6">
+            <label for="password" class="form-label text-white">Contraseña</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <div class="col-12">
+            <label for="mensaje" class="form-label text-white">Mensaje</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="3" placeholder="Tu mensaje..."></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-primary px-5 mt-3">Enviar</button>
+          </div>
+        </form>
+      </div>
+  
+      <!-- Mensaje a la derecha -->
+      <div class="col-lg-5 text-white">
+        <h2 class="mb-3">¡No te pierdas nuestras ofertas exclusivas!</h2>
+        <p>
+          Deja tus datos para recibir novedades, promociones y nuevos modelos de parkas reutilizadas.<br><br>
+          ¡Mantente al día y equipa tu próxima aventura con responsabilidad y estilo!
+        </p>
+      </div>
+  
+    </div>
+  </main>
 
 <footer>
 <p>¡Gracias por unirte a nuestra comunidad de aventureros!
     Tu interés en nuestras parkas de alta montaña reutilizadas es muy valioso para nosotros. Al dejar tus datos,
      <br> estarás entre los primeros en recibir nuestras ofertas exclusivas, nuevos modelos y consejos útiles para tus próximas aventuras.
     ¡Te esperamos pronto y estamos emocionados de acompañarte en tu próxima expedición!</p>
+<br>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <br>
+  <br>
+  <h3>Buscanos</h3>
 
-    <a href="https://www.instagram.com/outdoor.calafquen/">Instagram</a>
-<a href="">Facebook</a>
-<a href="">Twitter</a>
-    
+  <div class="social-icons">
+    <a class="instagram" href="https://www.instagram.com/outdoor.calafquen/" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a class="whatsapp" href="https://wa.me/56957198234" target="_blank" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a class="facebook" href="https://facebook.com/tupagina" target="_blank" title="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+  </div>
+  <br><br><br>
+  <p class="mb-0">&copy;  Outdoor Calafquén. Todos los derechos reservados.</p>
 </footer>
 
 
