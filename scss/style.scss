@@ -1,74 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/*media Query moviles   */
-body {
-  font-size: 16px;
-  padding: 10px;
-  background-color: black;
-}
-
-/* media Query tablets */
-@media (min-width: 600px) {
-  body {
-    font-size: 18px;
-    padding: 20px;
-  }
-}
-@media (min-width: 1024px) {
-  body {
-    font-size: 20px;
-    padding: 30px;
-  }
-}
-/* este cambia el color del menu sin bootstrap */
-/*encabezados*/
-h1 {
-  color: white;
-  font-size: 60px;
-  text-align: center;
-}
-
-/*parrafos*/
-p {
-  font-size: 20px;
-  color: white;
-  text-align: center;
-}
-
-/*a elementoen enlace*/
-a {
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  text-transform: capitalize;
-}
-
-/* css grid */
-/* grid container a tienda en imagenes */
-/* reseteo de imagenes  */
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-li {
-  color: white;
-  display: inline-table;
-}
+@use "base";
 
 /* borde imagen de inicio */
-.contenedor-imagen img {
-  border-radius: 200px;
+.contenedor-imagen {
+  img {
+    border-radius: 200px;
+  }
 }
 
 /*borde de imagenes en galleria*/
-.gallery-container img {
-  border-radius: 40px;
+.gallery-container {
+  img {
+    border-radius: 40px;
+  }
 }
 
 /*video responsive NOTICIAS*/
@@ -93,7 +36,14 @@ li {
 
 /*aplicando gradientes en el fondo de todas las paginas*/
 body {
-  background: linear-gradient(to bottom, #000000 70%, #808080 90%, #ffffff 100%);
+  background: linear-gradient(
+    to bottom,
+    #000000 70%,
+    // negro en la parte superior
+    #808080 90%,
+    // gris en el medio
+    #ffffff 100% // blanco al final
+  );
 }
 
 /*inicio*/
@@ -108,22 +58,28 @@ body {
 }
 
 /* con este llamado a class cambiamos con el display a lista vertical a horizontal */
-.inicio-menu ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.inicio-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
-.inicio-menu li {
-  margin: 0 15px;
+.inicio-menu {
+  li {
+    margin: 0 15px;
+  }
 }
 
 /* letras de menu inicio */
-.inicio-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 20px;
+.inicio-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
 }
 
 /*Tienda*/
@@ -137,21 +93,27 @@ body {
   background-color: black;
 }
 
-.tienda-menu ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.tienda-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
-.inicio-menu li {
-  margin: 0 15px;
+.inicio-menu {
+  li {
+    margin: 0 15px;
+  }
 }
 
-.tienda-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 20px;
+.tienda-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
 }
 
 /*NOTICIAS*/
@@ -165,21 +127,27 @@ body {
   background-color: black;
 }
 
-.noticias-menu ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.noticias-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
-.noticias-menu li {
-  margin: 0 15px;
+.noticias-menu {
+  li {
+    margin: 0 15px;
+  }
 }
 
-.noticias-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 20px;
+.noticias-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
 }
 
 /*NOSOTROS*/
@@ -193,29 +161,38 @@ body {
   background-color: black;
 }
 
-.nosotros-menu ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.nosotros-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
-.nosotros-menu li {
-  margin: 0 15px;
+.nosotros-menu {
+  li {
+    margin: 0 15px;
+  }
 }
 
-.nosotros-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 20px;
+.nosotros-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
 }
 
-.nosotros-menu li {
-  margin: 0 15px;
+.nosotros-menu {
+  li {
+    margin: 0 15px;
+  }
 }
 
 /*CONTACTO*/
 /* modificacion contacto con display flex */
+
 .contacto-menu {
   display: flex;
   justify-content: center;
@@ -225,40 +202,57 @@ body {
   background-color: black;
 }
 
-.contacto-menu ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.contacto-menu {
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
-.contacto-menu li {
-  margin: 0 15px;
+.contacto-menu {
+  li {
+    margin: 0 15px;
+  }
 }
 
-.contacto-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 15px 20px;
+.contacto-menu {
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+  }
 }
 
 .gallery-container {
   /*ancho*/
   width: 90%;
+
   /*ancho maximo */
   max-width: 1100px;
+
   /*margen arriba y abajo*/
   margin: 40px auto;
+
   display: grid;
+
   /*con este establecemos las columnas en la agaleria de tienda*/
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
   /*separacion entre las imagenes*/
   gap: 100px;
 }
 
-.menu-completo ul li a {
-  text-transform: uppercase;
-  transition: 0.1s;
+.menu-completo {
+  ul {
+    li {
+      a {
+        text-transform: uppercase;
+        transition: 0.1s;
+      }
+    }
+  }
 }
 
 /*sobre escritura estilos bootsrap*/
@@ -266,6 +260,7 @@ body {
   font-size: 20px;
   color: white;
   padding: 0px 50px 0px 50px;
+
   /*padding-top:0px ; 
     padding-rigth:40px;
     padding-botom:0px;
@@ -274,7 +269,7 @@ body {
 
 .navbar-collapse {
   display: flex;
-  justify-content: center;
+  justify-content: center; // Centra el contenido horizontalmente
 }
 
 .navbar-nav {
@@ -282,21 +277,23 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-}
-.navbar-nav .nav-item {
-  margin: 0 15px;
-}
-.navbar-nav .nav-item .nav-link {
-  font-size: 24px;
-  text-align: center;
-  color: white;
-  transition: all 0.3s ease;
-}
-.navbar-nav .nav-item .nav-link:hover {
-  color: #f0f0f0;
-  transform: scale(1.1);
-}
 
+  .nav-item {
+    margin: 0 15px;
+
+    .nav-link {
+      font-size: 24px; // Agranda las letras del menú
+      text-align: center;
+      color: white;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #f0f0f0;
+        transform: scale(1.1); // Efecto de agrandamiento al pasar el cursor
+      }
+    }
+  }
+}
 /*efecto del menu completo*/
 .navbar-collapse:hover .navbar-nav .nav-item .nav-link {
   color: black;
@@ -310,11 +307,17 @@ body {
   transition: color 0.3s ease;
 }
 
-.navbar-collapse .navbar-nav .nav-iten .nav-link:hover {
-  color: white;
+.navbar-collapse {
+  .navbar-nav {
+    .nav-iten {
+      .nav-link:hover {
+        color: white;
+      }
+    }
+  }
 }
-
 /*todo el footer*/
+
 .nav-link {
   display: flex;
   padding: 20px;
@@ -339,11 +342,9 @@ body {
 .instagram :hover {
   color: #d62976;
 }
-
 .whatsapp :hover {
   color: green;
 }
-
 .facebook :hover {
   color: blue;
 }
@@ -358,11 +359,8 @@ h3 {
 .navbar-brand img {
   width: 200px;
   height: auto;
-}
-@media (max-width: 800px) {
-  .navbar-brand img {
+
+  @media (max-width: 800px) {
     width: 60px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
